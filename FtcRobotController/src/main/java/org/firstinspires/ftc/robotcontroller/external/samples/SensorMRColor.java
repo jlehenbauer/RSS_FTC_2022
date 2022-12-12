@@ -110,12 +110,12 @@ public class SensorMRColor extends LinearOpMode {
       Color.RGBToHSV(colorSensor.red() * 8, colorSensor.green() * 8, colorSensor.blue() * 8, hsvValues);
 
       // send the info back to driver station using telemetry function.
-      telemetry.addData("LED", bLedOn ? "On" : "Off");
-      telemetry.addData("Clear", colorSensor.alpha());
-      telemetry.addData("Red  ", colorSensor.red());
-      telemetry.addData("Green", colorSensor.green());
-      telemetry.addData("Blue ", colorSensor.blue());
-      telemetry.addData("Hue", hsvValues[0]);
+      telemetry.addData("LED:   ", bLedOn ? "On" : "Off");
+      telemetry.addData("Clear: ", colorSensor.alpha());
+      telemetry.addData("Red:   ", colorSensor.red());
+      telemetry.addData("Green: ", colorSensor.green());
+      telemetry.addData("Blue:  ", colorSensor.blue());
+      telemetry.addData("Hue:   ", hsvValues[0]);
 
       // change the background color to match the color detected by the RGB sensor.
       // pass a reference to the hue, saturation, and value array as an argument
