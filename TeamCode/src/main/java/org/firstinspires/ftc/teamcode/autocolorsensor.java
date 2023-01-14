@@ -41,7 +41,7 @@ public class autocolorsensor extends LinearOpMode {
 
         graber.setPosition(0.1);
         waitForStart();
-        armmotor.setPower(-1);
+        armmotor.setPower(1);
         sleep(1500);
         armmotor.setPower(0);
         sleep(1000);
@@ -58,7 +58,7 @@ public class autocolorsensor extends LinearOpMode {
                     sleep(25000);
                 }
             }
-            drive(1, 0.25);
+            drive(0.75, 0.25);
             update_colors();
             if (read_color().equals("red")) {
                 crab_walk_left(0.9, 0.8);
